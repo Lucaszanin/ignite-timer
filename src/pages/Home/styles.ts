@@ -70,7 +70,7 @@ export const CountDownContainer = styled.div`
   gap: 1rem;
 
   span {
-    background: ${(props) => props.theme['gray-100']};
+    background-color: ${(props) => props.theme['gray-700']};
     padding: 2rem;
   }
 `

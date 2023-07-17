@@ -7,7 +7,6 @@ function DefaultLayout() {
     <LayoutContainer>
       <Header />
       <Outlet />
-      conteúdo
     </LayoutContainer>
   )
 }
