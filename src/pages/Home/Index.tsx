@@ -8,7 +8,7 @@ import {
   StartCountdownButton,
   TaskInput,
 } from './styles'
-import { FieldValues, SubmitHandler, useForm } from 'react-hook-form'
+import { useForm } from 'react-hook-form'
 
 function Home() {
   const { handleSubmit, watch, register } = useForm()
