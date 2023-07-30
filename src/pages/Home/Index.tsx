@@ -49,7 +49,7 @@ function Home() {
             max={60}
             {...register('minutesAmount', { valueAsNumber: true })}
           />
-          <span>minutos.</span>
+          <span>minu</span>
         </FormContainer>
 
         <CountDownContainer>
