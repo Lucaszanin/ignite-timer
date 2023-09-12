@@ -22,6 +22,7 @@ export type CyclesContextType = {
   setSecondsPassed: (seconds: number) => void
   interruptCurrentCycle: () => void
   createNewCycle: (data: CreateCycleData) => void
+  cycles: CycleProps[]
 }
 
 export type CyclesContexProviderProps = {
