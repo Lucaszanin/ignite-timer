@@ -28,3 +28,8 @@ export type CyclesContextType = {
 export type CyclesContexProviderProps = {
   children: ReactNode
 }
+
+export type CyclesState = {
+  cycles: CycleProps[]
+  activeCycleId: string | null
+}
