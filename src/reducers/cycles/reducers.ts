@@ -1,38 +1,37 @@
 import { CyclesState } from '../../contexts/types'
 import { ActionTypes } from './actions'
+import { produce } from 'immer'
 
 export function cyclesReducer(state: CyclesState, action: any) {
   switch (action.type) {
     case ActionTypes.Add_New_Cycle:
-      return {
-        ...state,
-        cycles: [...state.cycles, action.payload.data],
-        activeCycleId: action.payload.data.id,
-      }
-    case ActionTypes.Interruped_Cycle:
-      return {
-        ...state,
-        cycles: state.cycles.map((cycle) => {
-          if (cycle.id === state.activeCycleId) {
-            return { ...cycle, interruptedDate: new Date() }
-          } else {
-            return cycle
-          }
-        }),
-        activeCycleId: null,
-      }
-    case ActionTypes.Mark_Current_Cycle_As_Finished:
-      return {
-        ...state,
-        cycles: state.cycles.map((cycle) => {
-          if (cycle.id === state.activeCycleId) {
-            return { ...cycle, finishedDate: new Date() }
-          } else {
-            return cycle
-          }
-        }),
-        activeCycleId: null,
-      }
+      return produce(state, (draft) => {
+        draft.cycles.push(action.payload.data)
+        draft.activeCycleId = action.payload.data.id
+      })
+
+    case ActionTypes.Interruped_Cycle: {
+      const currentCycleIndex = state.cycles.findIndex((cycle) => {
+        return cycle.id === state.activeCycleId
+      })
+
+      if (currentCycleIndex < 0) return state
+      return produce(state, (draft) => {
+        draft.activeCycleId = null
+        draft.cycles[currentCycleIndex].interruptedDate = new Date()
+      })
+    }
+    case ActionTypes.Mark_Current_Cycle_As_Finished: {
+      const currentCycleIndex = state.cycles.findIndex((cycle) => {
+        return cycle.id === state.activeCycleId
+      })
+
+      if (currentCycleIndex < 0) return state
+      return produce(state, (draft) => {
+        draft.activeCycleId = null
+        draft.cycles[currentCycleIndex].finishedDate = new Date()
+      })
+    }
     default:
       return state
   }
