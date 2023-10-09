@@ -11,7 +11,7 @@ export const HomeContainer = styled.main`
   form {
     display: flex;
     flex-direction: column;
-    max-width: 100%;
+    width: 60%;
     align-items: center;
     gap: 3.5rem;
   }
