@@ -26,9 +26,8 @@ export function CyclesContextProvider({
       if (storageStateAsJSON) {
         return JSON.parse(storageStateAsJSON)
       }
-      return {
-        initialState,
-      }
+
+      return { initialState }
     },
   )
 
