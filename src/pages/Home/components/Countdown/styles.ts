@@ -8,6 +8,7 @@ export const CountDownContainer = styled.div`
   color: ${(props) => props.theme['gray-100']};
 
   display: flex;
+  justify-content: center;
   gap: 1rem;
 
   span {
