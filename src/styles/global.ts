@@ -29,6 +29,7 @@ export const GlobalStyle = createGlobalStyle`
         input,
         p,
         textarea,
+        span,
         button {
           font-size: 87.5% !important;
         }
