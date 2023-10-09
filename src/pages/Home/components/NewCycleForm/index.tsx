@@ -37,7 +37,7 @@ export function NewCycleForm() {
         max={20}
         {...register('minutesAmount', { valueAsNumber: true })}
       />
-      <span>minu</span>
+      <span>minutos</span>
     </FormContainer>
   )
 }
