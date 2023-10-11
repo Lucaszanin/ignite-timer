@@ -3,7 +3,7 @@
 ## Tabela do Conteudo
 
 <ul>
-<li><a href="#como-usar">Como usar</li>
+<li><a href="#como-usar">Como usar</a></li>
 <li><a href="#sobre">Sobre</a></li>
 <li><a href="#status">Status</a></li>
 <li><a href="#objetivo">Objetivo</a></li>
@@ -18,7 +18,7 @@ Para rodar o projeto em sua máquina você deve seguir os passos abaixo:
 
 git clone https://github.com/Lucaszanin/ignite-timer.git
 
-cd iginite-timer<br>
+cd ignite-timer<br>
 
 npm i<br>
 
@@ -39,7 +39,7 @@ Nesse desafio, foi desenvolvido uma aplicação para controle de timer, com base
 
 ## Status
 
-Projeto Ignite Timer concluido 🎯
+Projeto Ignite Timer concluído 🎯
 
 ## Objetivo
 
