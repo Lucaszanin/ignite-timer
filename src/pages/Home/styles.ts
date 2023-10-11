@@ -10,8 +10,8 @@ export const HomeContainer = styled.main`
 
   form {
     display: flex;
-    width: 100%;
     flex-direction: column;
+    width: 60%;
     align-items: center;
     gap: 3.5rem;
   }

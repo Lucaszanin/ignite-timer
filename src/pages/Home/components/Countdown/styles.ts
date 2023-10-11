@@ -13,44 +13,38 @@ export const CountDownContainer = styled.div`
 
   span {
     background-color: ${(props) => props.theme['gray-700']};
-    padding: 2rem;
+    padding: 1.5rem;
     display: flex;
     align-items: center;
 
-    @media (max-width: 400px) {
+    @media (max-width: 624px) {
       padding: 1rem;
     }
   }
-
-  @media (max-width: 1024px) {
+  @media (max-width: 624px) {
     font-size: 7rem;
+    line-height: 7rem;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 450px) {
     font-size: 5rem;
+    line-height: 5rem;
   }
-
-  @media (max-width: 525px) {
+  @media (max-width: 375px) {
     font-size: 4rem;
-    line-height: 0;
+    line-height: 4rem;
   }
-
-  @media (max-width: 480px) {
-    max-width: 80vw;
-    font-size: 2rem;
-  }
-
-  @media (max-width: 400px) {
-    max-width: 70vw;
-    font-size: 1rem;
+  @media (max-width: 320px) {
+    font-size: 3rem;
+    line-height: 3rem;
   }
 `
 
 export const Separator = styled.div`
   padding: 2rem 0;
   color: ${(props) => props.theme['green-500']};
-  width: 4rem;
-  overflow: hidden;
+  width: 5vw;
   display: flex;
+  align-items: center;
   justify-content: center;
 `

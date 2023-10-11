@@ -6,8 +6,8 @@ export function cyclesReducer(state: CyclesState, action: any) {
   switch (action.type) {
     case ActionTypes.Add_New_Cycle:
       return produce(state, (draft) => {
-        draft.cycles.push(action.payload.data)
-        draft.activeCycleId = action.payload.data.id
+        draft.cycles.push(action?.payload?.data)
+        draft.activeCycleId = action.payload?.data?.id
       })
 
     case ActionTypes.Interruped_Cycle: {
